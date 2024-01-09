@@ -16,14 +16,6 @@ type BaseWorker struct {
 	NewQueWorkerFunc func() (*que.Worker, error)
 }
 
-func NewBaseWorker(
-	NewQueWorkerFunc func() (*que.Worker, error),
-) *BaseWorker {
-	return &BaseWorker{
-		NewQueWorkerFunc: NewQueWorkerFunc,
-	}
-}
-
 func (b *BaseWorker) Start(ctx context.Context) error {
 	ctx, shouldStart, stopped := b.StartInit(ctx)
 	if !shouldStart {
