@@ -1,0 +1,12 @@
+version: '3'
+services:
+  postgres:
+    image: public.ecr.aws/theplant/postgresmd:13
+    environment:
+      - "POSTGRES_MULTIPLE_DATABASES=test_dev"
+      - "POSTGRES_USER=test"
+      - "POSTGRES_PASSWORD=123"
+      - "POSTGRES_EXTENSIONS=btree_gin,pg_stat_statements"
+    command: postgres -c shared_preload_libraries='pg_stat_statements' -c pg_stat_statements.max=10000 -c pg_stat_statements.track=all
+    ports:
+      - "5412:5432"
