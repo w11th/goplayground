@@ -24,7 +24,7 @@ func NewWorker(
 }
 
 func (w *Worker) Perform(ctx context.Context, job que.Job) (err error) {
-	fmt.Println("perform job:#%d", job.ID)
+	fmt.Printf("perform job:#%d\n", job.ID())
 	return job.Done(ctx)
 }
 
