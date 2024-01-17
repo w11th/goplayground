@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/tnclong/go-que"
-	"github.com/w11th/goplayground/v3/workflow"
+	"github.com/w11th/goplayground/internal/cmd/workertests/v3/workflow"
 )
 
 type Worker struct {

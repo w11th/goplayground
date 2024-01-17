@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/tnclong/go-que"
-	"github.com/w11th/goplayground/v2/startstop"
+	"github.com/w11th/goplayground/internal/cmd/workertests/v2/startstop"
 )
 
 type Worker struct {
