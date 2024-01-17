@@ -9,7 +9,7 @@ import (
 
 	_ "github.com/jackc/pgx/v5/stdlib"
 	"github.com/tnclong/go-que/pg"
-	"github.com/w11th/goplayground/v2/workflow"
+	"github.com/w11th/goplayground/internal/cmd/workertests/v2/workflow"
 )
 
 func main() {
